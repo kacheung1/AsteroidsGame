@@ -122,8 +122,8 @@ class Floater //Do NOT modify the Floater class! Make changes in the Spaceship c
 
 class Star //note that this class does NOT extend Floater
 {
-  int myColor;
-  int x,y;
+  private int myColor;
+  private int x,y;
   
   public Star ()
   {
@@ -142,8 +142,8 @@ class Star //note that this class does NOT extend Floater
 
 class Spaceship extends Floater  
 {   
-  int myY;
-    int myX;
+ private int myY;
+ private int myX;
   public Spaceship ()
   {
     corners=4;
@@ -158,7 +158,7 @@ class Spaceship extends Floater
     xCorners[3]= -2;
     yCorners[3]=0;
     myColor= color(255,255,255);
-    myCenterY=250;
+    myCenterY=250;                     
     myCenterX=250;
     myXspeed=1;
     myYspeed=0;
@@ -167,9 +167,10 @@ class Spaceship extends Floater
   public void hyperspace()
   {
     myXspeed=0;
+myYspeed=0;                                                  
     myCenterX=(int)(Math.random()*500);
     myCenterY=(int)(Math.random()*500);
-myPointDirection= (int)(Math.random()*500);
+myPointDirection= (int)(Math.random()*360);
   }
   
 }
