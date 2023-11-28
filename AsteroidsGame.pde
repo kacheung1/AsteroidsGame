@@ -31,7 +31,7 @@ public void draw ()
     {
      bob.hyperspace();
     }
-(key == 'w' || key == 'W')
+if (key == 'w' || key == 'W')
     {
       bob.myXspeed++;
       bob.myYspeed++;
